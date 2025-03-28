@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Ensures proper mobile scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politicians for Preserving the Forest</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .perspective {
+      perspective: 1000px;
+    }
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-green-700 py-6 relative">
+    <h1 class="text-center text-white text-3xl font-bold">Vaalivinkkejä jokimetsän ystäville</h1>
+
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto p-4 sm:p-6">
+    <!-- Preface Section -->
+    <section class="bg-green-100 p-4 sm:p-6 rounded-lg shadow-md mb-6 sm:mb-8">
+      <p class="mb-4">
+        Jos vielä etsit ehdokasta ja jokimetsämme säilyttäminen rakentamottomana on sinulle tärkeää, niin alla on
+        kerättynä joitakin ehdokkaita eri puolueista, joita kannattaa harkita.
+      </p>
+      <p class="mb-4">
+        Mikäli olet jo valinnut ehdokkaasi ja pidät jokimetsää tärkeänä, niin omaan ehdokkaaseen kannattaa olla
+        yhteydessä ja kertoa asiasta. Jos tiedät jonkun aktiivisen ehdokkaan, joka ei ole listalla, niin vinkkaa
+        hänelle tästä sivusta.
+      </p>
+      <p>
+        Tuleva valtuusto päättää jokimetsämme kohtalosta. Yhteisellä aktiivisuudellamme se ei ole metsä nurin ja
+        taloja tilalle.
+      </p>
+    </section>
+
+    <!-- Politician Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+      <!-- Politician Card 1 (Vaula Norrena) -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden relative flex flex-col sm:flex-row">
+        <div class="absolute top-2 right-2 bg-green-600 text-white text-base font-bold px-4 py-1 rounded-full flex items-center justify-center">99</div>
+        <img class="w-full sm:w-1/3 h-auto object-cover" src="images/ehdokkaat/Vaula_Norrena.png" alt="Vaula Norrena">
+        <div class="p-4 flex-1">
+          <h2 class="text-xl font-semibold text-gray-800">Vaula Norrena</h2>
+          <p class="text-gray-600">Tutkija, kunnanvaltuutettu</p>
+          <div class="mt-4 space-y-1">
+            <p class="text-gray-700"><strong>Puolue:</strong> Vihreät</p>
+            <p class="text-gray-700"><strong>Kotipaikka:</strong> Mikkola</p>
+
+            <!-- Button to reveal the long text -->
+            <button
+              class="mt-2 bg-blue-700 hover:bg-blue-800 text-white py-1 px-3 rounded"
+              onclick="toggleGreetings('vaulaGreetings')">
+              Näytä Terveisiä
+            </button>
+
+            <!-- Hidden longer message -->
+            <div id="vaulaGreetings" class="hidden text-gray-700 mt-2">
+              (Vaulan terveisiä teksti tähän...)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Politician Card 2 (Heli Hakala) -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden relative flex flex-col sm:flex-row">
+        <div class="absolute top-2 right-2 bg-blue-700 text-white text-base font-bold px-4 py-1 rounded-full flex items-center justify-center">542</div>
+        <img class="w-full sm:w-1/3 h-auto object-cover" src="images/ehdokkaat/Heli_Hakala.jpg" alt="Heli Hakala">
+        <div class="p-4 flex-1">
+          <h2 class="text-xl font-semibold text-gray-800">Heli Hakala</h2>
+          <p class="text-gray-600">Opettaja, kunnanvaltuutettu</p>
+          <div class="mt-4 space-y-1">
+            <p class="text-gray-700"><strong>Puolue:</strong> Kokoomus</p>
+            <p class="text-gray-700"><strong>Kotipaikka:</strong> Hiekkaharju</p>
+
+            <!-- Button to reveal the long text -->
+            <button 
+              class="mt-2 bg-blue-700 hover:bg-blue-800 text-white py-1 px-3 rounded"
+              onclick="toggleGreetings('heliGreetings')">
+              Näytä Terveisiä
+            </button>
+
+            <!-- Hidden longer message -->
+            <div id="heliGreetings" class="hidden text-gray-700 mt-2">
+              Pidän erittäin tärkeänä, että asukkaat tulevat kuulluksi Keravanjoen pientaloasiassa.
+              Muutimme perheemme kanssa viime syksynä Sotungista laajojen metsäalueiden syleilystä
+              Hiekkaharjuun mieheni lapsuudenkotiin. Nykyisellä asuinalueellamme on pieni
+              metsäntapainen, jossa käymme koiraamme ulkoiluttamassa. Metsien merkitys Vantaalla on
+              tämän muutoksen myötä vasta kunnolla jäsentynyt itselleni. Siksikin ymmärrän Päiväkummun
+              ja lähialueiden asukkaiden huolen koskien Keravanjoen viereen kaavoitetusta
+              pientaloalueesta ja metsän kaatamisesta. Olen vaikuttunut myös mittakaavasta, jolla
+              asukkaat ovat ryhtyneet vaikuttamaan asiaan. Varsinainen päätös kaavasta on
+              kaupunkiympäristölautakunnan harteilla toukokuun kokouksessa. Se, miten itse olen asiaan
+              vaikuttanut, liittyy tähän. Olen saanut nostettua asian vahvasti esille lautakunnan
+              isoimpien ryhmien jäsenten kanssa. Olen käynyt pitkiä keskusteluja vaihtoehdoista,
+              joiden avulla huomioitaisi asukkaiden toive lähimetsän säästämiseksi. Jatkan tämän työn
+              parissa toukokuun kokoukseen ja tarpeen tullen sen jälkeenkin. Metsäalue on ahkerassa
+              ulkoilu-, ja virkistyskäytössä ja sellaisena palvelisi asukkaita parhaiten.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Politician Card 3 (Jari Jääskeläinen) -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden relative flex flex-col sm:flex-row">
+        <div class="absolute top-2 right-2 bg-pink-500 text-white text-base font-bold px-4 py-1 rounded-full flex items-center justify-center">416</div>
+        <img class="w-full sm:w-1/3 h-auto object-cover" src="images/ehdokkaat/Jari_Jääskeläinen.png" alt="Jari Jääskeläinen">
+        <div class="p-4 flex-1">
+          <h2 class="text-xl font-semibold text-gray-800">Jari Jääskeläinen</h2>
+          <p class="text-gray-600">Luottamusmies, kunnanvaltuutettu (varalla)</p>
+          <div class="mt-4 space-y-1">
+            <p class="text-gray-700"><strong>Puolue:</strong> Vasemmistoliitto</p>
+            <p class="text-gray-700"><strong>Kotipaikka:</strong> Päiväkumpu</p>
+
+            <!-- Button to reveal the long text -->
+            <button
+              class="mt-2 bg-blue-700 hover:bg-blue-800 text-white py-1 px-3 rounded"
+              onclick="toggleGreetings('jariGreetings')">
+              Näytä Terveisiä
+            </button>
+
+            <!-- Hidden longer message -->
+            <div id="jariGreetings" class="hidden text-gray-700 mt-2">
+              (Jarin terveisiä teksti tähän...)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Politician Card 4 (Jenni Alasuutari) -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden relative flex flex-col sm:flex-row">
+        <div class="absolute top-2 right-2 bg-green-600 text-white text-base font-bold px-4 py-1 rounded-full flex items-center justify-center">52</div>
+        <img class="w-full sm:w-1/3 h-auto object-cover" src="images/ehdokkaat/Jenni_Alasuutari.PNG" alt="Jenni Alasuutari">
+        <div class="p-4 flex-1">
+          <h2 class="text-xl font-semibold text-gray-800">Jenni Alasuutari</h2>
+          <p class="text-gray-600">KTM, kuntavaaliehdokas</p>
+          <div class="mt-4 space-y-1">
+            <p class="text-gray-700"><strong>Puolue:</strong> Vihreät</p>
+            <p class="text-gray-700"><strong>Kotipaikka:</strong> Päiväkumpu</p>
+
+            <!-- Button to reveal the long text -->
+            <button
+              class="mt-2 bg-blue-700 hover:bg-blue-800 text-white py-1 px-3 rounded"
+              onclick="toggleGreetings('jenniGreetings')">
+              Näytä Terveisiä
+            </button>
+
+            <!-- Hidden longer message -->
+            <div id="jenniGreetings" class="hidden text-gray-700 mt-2">
+              (Jennin terveisiä teksti tähän...)
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function toggleGreetings(id) {
+      const div = document.getElementById(id);
+      div.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
