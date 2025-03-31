@@ -5,65 +5,413 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaavoitusprosessin eteneminen</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleDetails(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-gray-50">
   <main class="max-w-4xl mx-auto p-6">
-    <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Kaavoitusprosessin eteneminen</h1>
+    <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Kaavoitusprosessin eteneminen ja vaikuttamisen mahdollisuudet</h1>
+    <p class="mb-6 text-gray-700">
+      Näin pysyt ajantasalla ja pääset vaikuttamaan. Tilaa sähköpostiisi asukasaktiivien tiedotteet asian etenemisestä ja tietoa miten itse voit vaikuttaa. Laita viesti otsikolla: <strong>”Jokimetsän tiedotteet”</strong> osoitteeseen 
+      <a href="mailto:hpertta@gmail.com" class="text-blue-600 hover:underline text-left">hpertta@gmail.com</a> 
+      liittyäksesi sposti-listalle. Emme spämmää.
+    </p>
+    <p class="mb-8 text-gray-700">
+      Ota <a href="https://www.facebook.com/groups/2086345038416080/" target="_blank" class="text-blue-600 hover:underline">’Vantaan lähimetsien puolesta’ Facebook-ryhmä</a> seurantaan.
+    </p>
+
+    <!-- Timeline container -->
     <div class="relative border-l-4 border-green-600">
-      <!-- 2020 -->
+
+      <!-- 2025 items -->
       <div class="mb-10 ml-6">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <time class="block mb-2 text-sm font-semibold text-gray-600">2020</time>
-        <p class="text-gray-800">
-          Kaupunki aloitti suunnitelmat Päiväkummun metsän kaavoittamiseksi asuinalueeksi. Alueen asukkaita ei kuultu riittävästi.
+        <button onclick="toggleDetails('event-2025-1')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          13.5.2025 Kaava mahdollisesti esillä kaupunkiympäristölautakunnan kokouksessa
+        </button>
+        <p id="event-2025-1" class="text-gray-700 hidden">
+          Kaavan esittelyn jälkeen on asukkailla mahdollisuus jättää kaavasta muistutuksia. Tämä ajankohta voi sattua kesälle.
         </p>
       </div>
 
-      <!-- 2021 -->
       <div class="mb-10 ml-6">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <time class="block mb-2 text-sm font-semibold text-gray-600">2021</time>
-        <p class="text-gray-800">
-          Ensimmäinen kaavaluonnos julkaistiin. Asukkaat jättivät yli 500 vastalausetta, mutta kaupunki jatkoi suunnitelmia.
+        <button onclick="toggleDetails('event-2025-2')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          13.4.2025 Kuntavaalit (ennakkoäänestys 2.–8.4.2025)
+        </button>
+        <p id="event-2025-2" class="text-gray-700 hidden">
+          Vaalivinkkejä Jokimetsä-sivustolla ja Suomen luonnonsuojeluliiton kuntavaalit – sivulla 
+          <a href="https://www.sll.fi/kuntavaalit" target="_blank" class="text-blue-600 hover:underline text-left">https://www.sll.fi/kuntavaalit</a>.
         </p>
       </div>
 
-      <!-- 2022 -->
       <div class="mb-10 ml-6">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <time class="block mb-2 text-sm font-semibold text-gray-600">2022</time>
-        <p class="text-gray-800">
-          Kaupunki hyväksyi kaavan, joka mahdollistaa metsän kaatamisen. Tämä herätti laajaa vastustusta ja mielenosoituksia.
+        <button onclick="toggleDetails('event-2025-3')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          2.4.2025 Jokimetsa.com sivusto avataan
+        </button>
+        <p id="event-2025-3" class="text-gray-700 hidden">
+          Asukasaktiivit avaavat sivuston netissä, jossa on osiot päättäjille, äänestäjille sekä paikka missä seurata päätösprosessin etenemistä.
         </p>
       </div>
 
-      <!-- 2023 -->
       <div class="mb-10 ml-6">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <time class="block mb-2 text-sm font-semibold text-gray-600">2023</time>
-        <p class="text-gray-800">
-          Asukkaat tekivät valituksen hallinto-oikeuteen, mutta päätös pysyi voimassa. Metsän kaataminen aloitettiin.
+        <button onclick="toggleDetails('event-2025-4')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          9.3.2025 Luontopäivä
+        </button>
+        <p id="event-2025-4" class="text-gray-700 hidden">
+          Asukasaktiivit järjestävät yhdessä Korso-Koivukylä Vihreiden ja Rekolan Marttojen tuella Luontopäivän alueella tietoisuuden lisäämiseksi. Kuntalaisaloitteen kannatusmäärä 2551.
         </p>
       </div>
 
-      <!-- 2024 -->
       <div class="mb-10 ml-6">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <time class="block mb-2 text-sm font-semibold text-gray-600">2024</time>
-        <p class="text-gray-800">
-          Lisää tapahtumia voidaan lisätä tähän, kun prosessi etenee.
+        <button onclick="toggleDetails('event-2025-5')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          6.3.2025 Mielipidekirjoitus: Kuunnellaanko Vantaalla aidosti asukkaita?
+        </button>
+        <p id="event-2025-5" class="text-gray-700 hidden">
+          Heli Hakala (kok.) julkaisi mielipidekirjoituksen, jossa kyseenalaistetaan asukkaiden kuulemisen aitous Vantaalla.
         </p>
       </div>
 
-      <!-- 2025 -->
       <div class="mb-10 ml-6">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <time class="block mb-2 text-sm font-semibold text-gray-600">2025</time>
-        <p class="text-gray-800">
-          Lisää tapahtumia voidaan lisätä tähän, kun prosessi etenee.
+        <button onclick="toggleDetails('event-2025-6')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          4.3.2025 Asukasaktiivien kirje kaupunkiympäristölautakunnan jäsenille
+        </button>
+        <p id="event-2025-6" class="text-gray-700 hidden">
+          Kirje kokosi tietoa alueen merkityksestä asukkaille.
         </p>
       </div>
 
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2025-7')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          27.1.2025 Jari Jääskeläinen jätti valtuustoaloitteen ”Päiväkummun Keravanjoen lähimetsä suojeltava”
+        </button>
+        <p id="event-2025-7" class="text-gray-700 hidden">
+          Aloite sai 18 muun valtuutetun kannatuksen ja eteni valmisteluun. Kaupunginhallituksen on valmisteltava vastaus aloitteeseen viimeistään puolen vuoden kuluessa.
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2025-8')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          14.1.2025 Pöytäkirjalausuma koskien 'Kaavoitusohjelma 2025-2027' dokumenttia ja kokonaisheikentämättömyyden mallia
+        </button>
+        <p id="event-2025-8" class="text-gray-700 hidden">
+          Kaupunkiympäristölautakunnan kokouksessa vihreiden lautakuntaryhmä jätti pöytäkirjalausuman,
+          johon vasemmiston, perussuomalaisten ja sosiaalidemokraattien lautakuntaryhmät yhtyivät:
+          <br>
+          ”Vantaalla käyttöön otettavan kokonaisheikentämättömyyden mallin mukaisesti rakentamista luonnon kannalta herkille alueille tulee ensisijaisesti välttää, toissijaisesti lieventää vaikutuksia ja vasta viimeisenä vaihtoehtona kompensoida vaikutukset toisaalla. Päiväkummun pientaloalueen asemakaavamuutoksessa tulee arvioida rakentamisen välttämättömyyttä menetettyihin luontoarvoihin nähden ennen kaavaprosessin etenemistä.”
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2025-9')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          13.1.2025 Mielipidekirjoitus: Rakennetaan pelloille, jotta lähimetsät säästyvät Vantaalla
+        </button>
+        <p id="event-2025-9" class="text-gray-700 hidden">
+          Vaula Norrena (vihr.) julkaisi mielipidekirjoituksen, jossa ehdotetaan rakentamista pelloille lähimetsien säästämiseksi.
+        </p>
+      </div>
+
+      <!-- 2024 items -->
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-1')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          10.12.2024 Kaavaluonnosta esiteltiin kaupunkiympäristölautakunnan kokouksessa
+        </button>
+        <p id="event-2024-1" class="text-gray-700 hidden">
+          Päiväkummun pientalotontit ja virkistysalue – kaavan luonnosta esiteltiin kaupunkiympäristölautakunnan kokouksessa. 
+          Asukasaktiivien kyselyyn vastattiin, että kaupungin tavoitteena on viedä kaavamuutosehdotus 
+          kaupunkiympäristölautakuntaan toukokuussa 2025, minkä jälkeen se tulee nähtäville, ja osallisten on 
+          mahdollista jättää siitä muistutus.
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-2')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          12.11.2024 Yleiskaava 2020:n mahdollistamat pientaloalueet -kartoitus julkaistaan
+        </button>
+        <p id="event-2024-2" class="text-gray-700 hidden">
+          Kaupunki julkaisee Yleiskaava 2020:n mahdollistamat pientaloalueet -kartoitus dokumentin. Päiväkummun kaavan rajoittavaksi 
+          tekijäksi on tunnistettu ’asukasmielipiteet’. Maastokäynnillä todetuista luontoarvoista ei ole mainintaa dokumentissa.
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-3')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          8.10.2024 Suomen luonnonsuojeluliiton järjestämä maastokäynti kaupungille
+        </button>
+        <p id="event-2024-3" class="text-gray-700 hidden">
+          Kaupungin ympäristökeskuksen edustajat kävivät yhdessä maastokäynnillä Suomen luonnonsuojeluliiton Uudenmaanpiirin 
+          asiantuntijoiden kanssa. Maastokäynnin havainnot luvattiin välittää kaavoittajille, joista kukaan ei päässyt paikalle. 
+          Maastokäynnillä syntyi yhteisymmärrys siitä, että alueen alkuperäisessä luontoselvityksessä on puutteita. Erityisesti 
+          metsikkökuviot linkkimastolta länsilounaaseen, lounaaseen ja etelälounaaseen oli virheellisesti dokumentoitu alkuperäisessä 
+          luontoselvityksessä, ja alueen luontoarvot olivat jääneet tunnistamatta.
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-4')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          19.9.2024 Vastaus asukasaktiivien kirjeeseen
+        </button>
+        <p id="event-2024-4" class="text-gray-700 hidden">
+          Kaupungin asemakaavapäällikkö ja kaupungin asiantuntijat vastaavat kirjeen kysymyksiin suurpiirteisesti ja vähätellen.
+          Asiasta huomauttaa valtuutettu Pekka Virkamäki.
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-5')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          16.9.2024 Päiväkummun asemakaavamuutoksen huolenaiheet ja kysymykset – asukasaktiivien kirje
+        </button>
+        <p id="event-2024-5" class="text-gray-700 hidden">
+          Asukasaktiivit lähettävät kirjeen kaupungin päättäjille ja virkamiehille, jossa kolme kysymystä:
+          <br><br>
+          <strong>Kysymys 1:</strong> Vantaan asukkaille ja päättäjille on annettu luontoselvityksen osalta ristiriitaista ja väärää tietoa. 
+          Näin ollen kaavan valmistelua on viety eteenpäin kaikkien osapuolten osalta oleellisesti väärien tietojen varassa. 
+          Mihin toimenpiteisiin kaupunki ryhtyy asian korjaamiseksi?
+          <br><br>
+          <strong>Kysymys 2:</strong> Millaisiin toimenpiteisiin kaupunki ryhtyy asemakaavamuutoksen 002558 osalta, jotta tämä 
+          ”potentiaalisesti hiljainen alue” voidaan kokonaisuudessaan säilyttää ja näin edistää kaupunkilaisten hyvinvointia?
+          <br><br>
+          <strong>Kysymys 3:</strong> Onko kaupunki ryhtynyt toimenpiteisiin selvittääkseen muita vaihtoehtoisia alueita 
+          pientalorakentamiselle strategisten tavoitteiden saavuttamiseksi? Mitä nämä toimenpiteet ovat olleet ja kenen toimesta 
+          ne on toteutettu?
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-6')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          07/2024 Äänimaisemaltaan hiljaiset ja miellyttävät alueet Vantaalla selvitys
+        </button>
+        <p id="event-2024-6" class="text-gray-700 hidden">
+          Kaupunki julkaisee selvityksen ’Äänimaisemaltaan hiljaiset ja miellyttävät alueet Vantaalla’. Kaavan 002558 alue sijoittuu 
+          potentiaalisesti hiljaiselle alueelle, joka tarjoaa asukkaille paikan rauhoittua ja edistää hyvinvointia, kompensoiden 
+          kasvavaa liikennemelua (lentoliikennemelu, Lahden moottoritien melu ja muu liikennemelu), josta Päiväkummussa kärsimme. 
+          Kaupunki on sitoutunut selvittämään mahdollisuuksia virallistaa ja suojella ääniympäristöltään arvokkaita alueita 
+          toimintakautensa aikana.
+        </p>
+      </div>
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-7')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          24.5.2024 Asukasaktiivien järjestäytyminen
+        </button>
+        <p id="event-2024-7" class="text-gray-700 hidden">
+          Asukasaktiivit järjestäytyvät paremmin. WhatsUp-ryhmä perustetaan ja Vantaan lähimetsien puolesta – Facebook-ryhmän idea syntyy.
+        </p>
+      </div>
+
+
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-8')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          10.4.2024 Suomen luonnonsuojeluliiton Uudenmaanpiirin lausunto kaavaluonnoksesta
+        </button>
+        <p id="event-2024-8" class="text-gray-700 hidden">
+          Suomen luonnonsuojeluliiton Uudenmaanpiiri antaa lausunnon Päiväkummun pientalotontit ja virkistysalue -asemakaavan luonnoksesta. Lausunto on isoin osin ristiriidassa alueella aiemmin tehdyn luontoselvityksen kanssa:
+          <br><br>
+          ”Asemakaavaa ollaan laatimassa perustuen Vantaan lainvoimaiseen yleiskaavaan ja kaavaluonnoksessa esitetyt rakentamisalueet perustuvat kyseisen kaavan rakentamisaluevaraukseen. Yleiskaavaa laadittaessa kyseisen varausalueen soveltumista rakentamiskäyttöön ei kuitenkaan ole asianmukaisesti selvitetty sen paremmin luonnonarvojen, maaperän rakennettavuuskysymysten kuin hulevesikysymysten kannalta. Todellisuudessa huomattava osa edellä mainitun yleiskaavan rakentamisvarauksen alueesta on rakentamiseen sopimatonta. Asemakaava-alueen luonnonarvoja on sittemmin tarkemmin selvitetty (Faunatica 2022), mutta arvokkaiden elinympäristöjen selvittämiseen on tässäkin työssä käytetty verrattain niukasti aikaa. Osa kaava-alueen arvokkaista elinympäristöistä (lehtoja, erilaisia runsaslahopuustoisia metsiä) on tässä yhteydessä jäänyt tunnistamatta. Yksi edellä mainittujen arvokkaiden luontotyyppien keskittymä sijaitsee kaavaluonnoksessa rakentamiseen esitetyn alueen pohjoispuoliskossa.”
+          <br><br>
+          ”Vaikka alueella on kartoitettu merkittävien lintulajien pesintöjä, sitä ei ole jostain syystä kuitenkaan merkitty Faunatican selvityksessä arvokkaaksi lintukohteeksi.”
+          <br><br>
+          ”Kohde on Faunatican luontoselvityksessä todettu virheellisesti ”metsittyväksi pelloksi”, ja sen huomattavat luonnonarvot ovat jääneet tunnistamatta. Todellisuudessa kyseessä on entinen pelto, joka on jo aikapäiviä sitten metsittynyt kosteaksi, lehtopohjaiseksi, puustoltaan nykyisin varttuneeksi ja erittäin runsaslahopuustoiseksi, monipuulajiseksi lehtimetsäksi. Kohteen pohjoispuoliskoa ja sille kaavailtua tulevaisuutta on kaavan valmisteluaineistossa virheellisesti kuvattu seuraavasti: ”Moreenimäillä ja rinteillä rinnetaloja ja metsäpuutarhaa, myös olevaa puustoa ja kivenlohkareita säilyttäen”. Todellisuudessa kyseessä on kostea savikko. Kohde on hulevesien hallinnan kannalta erityisen tärkeä.”
+        </p>
+      </div>
+      
+      <div class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+        <button onclick="toggleDetails('event-2024-9')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+          10.4.2024 Paikallisten yhdistysten ja asukasaktiivien kannanotto
+        </button>
+        <p id="event-2024-9" class="text-gray-700 hidden">
+          Asukasaktiivien ja paikallisten yhdistysten: Päiväkummun Omakotiyhdistys ry, Rekola-Asolan Omakotiyhdistys ry, Rekolan Marttayhdistys ry sekä Korson Omakotiyhdistys ry:n puoltava kannanotto, lähetetään mielipiteenä kaupungille osallistumisajan puitteissa. Lisäksi kerrotaan kuntalaisaloitteen kannatustilanne 2199 nimeä.
+        </p>
+      </div>
+
+          <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2024-10')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        27.3.2024 Kaavan valmisteluaineisto julkaistaan
+      </button>
+      <p id="event-2024-10" class="text-gray-700 hidden">
+        Kaupunki julkaisee 002558 Päiväkummun pientalotontit ja virkistysalue kaavan valmisteluaineiston ja pyytää siihen mielipiteitä 10.4.2024 mennessä.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2024-11')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        6.2.2024 Asukkaiden ja paikallisten yhdistysten kirje päättäjille
+      </button>
+      <p id="event-2024-11" class="text-gray-700 hidden">
+        Asukasaktiivit ja paikalliset yhdistykset: Päiväkummun Omakotiyhdistys ry, Rekola-Asolan Omakotiyhdistys ry, Rekolan Marttayhdistys ry sekä Korson Omakotiyhdistys ry:n puoltava kannanotto, lähettävät kaupunkiympäristölautakunnalle kirjeen koskien vireillä olevaa Päiväkummun pientalotonttien ja virkistysalueen asemakaavamuutosta 002558. Kirjeessä esiteltiin eri näkökulmia miksi Keravanjoen metsä on arvokas asukkaille sekä edotettiin, että virkamiestyönä voitaisiin selvittää olemassa olevat muut vaihtoehdot strategisiin tavoitteisiin pääsemiseksi.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-1')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        9.5.2023 Kuntalaisaloitteen kannatustilanteen henk. koht. luovutus kaupunkiympäristölautakunnalle
+      </button>
+      <p id="event-2023-1" class="text-gray-700 hidden">
+        Asukkaiden delegaatio, kävivät luovuttamassa kaupunkiympäristölautakunnan puheenjohtajistolle kuntalaisaloitteen: Säilytetään Keravanjokeen rajautuva yhtenäinen luonnonmetsä Päiväkummussa ja Matarissa - kannatustilanteen ajalla 13.3. - 8.5.2023, yhteensä yli 1800 kannattajaa.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-2')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        28.4.2023 Asukasaktiivit kutsuvat päättäjiä maastoon tutustumaan alueeseen
+      </button>
+      <p id="event-2023-2" class="text-gray-700 hidden">
+        Paikalle saapuivat Kaukola Ulla, sd., Ahokas Siri, kok., Suni Antti, liik. ja Tamminen Ida, sd.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-3')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        17.4.2023 Kuntalaisaloitetta kannattaneiden kannanotto
+      </button>
+      <p id="event-2023-3" class="text-gray-700 hidden">
+        Kuntalaisaloitteen kannattajat ja kannanotto lähetetään kaupungille osallistumisajan puitteissa. Kuntalaisaloitteella 1660 kannattajaa. Lisäksi lähetään käsin paperille kerätyt asukkaiden yhteiskannanotto 169 nimeä. Nimet on kerätty pääsääntöisesti alueella ulkoilevilta henkilöiltä.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-4')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        12.4.2023 Juttu Hesarissa
+      </button>
+      <p id="event-2023-4" class="text-gray-700 hidden">
+        Helsingin Sanomat kirjoittaa: Keravanjoen varressa kytee kiista lähimetsän tuhosta: ”Käsittämätöntä”
+        <br>
+        <a href="https://www.hs.fi/kaupunki/vantaa/art-2000009511481.html" target="_blank" class="text-blue-600 hover:underline">https://www.hs.fi/kaupunki/vantaa/art-2000009511481.html</a>
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-5')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        11.4.2023 Asukasaktiivit kutsuvat päättäjiä tutustumaan alueeseen
+      </button>
+      <p id="event-2023-5" class="text-gray-700 hidden">
+        Paikalle saapuivat Hartikainen Janne, ps., Jääskeläinen Jari, vas., Multala Sari, kok., Karhu Suvi, ps., Kostilainen Anniina, vihr. ja Mutanen Tuomas, vihr.
+      </p>
+    </div>
+
+        <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-6')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        4.4.2023 Kaupungin asukastilaisuus
+      </button>
+      <p id="event-2023-6" class="text-gray-700 hidden">
+        Kaupunki järjesti asukastilaisuuden Koivukylän asukastilassa. Kuntalaisaloitteella kannattajia 1114. Viesti oli selvä, asukkaat olivat Keravanjoen metsään rakentamista vastaan.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-7')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        1.4.2023 Juttu Vantaan Sanomissa
+      </button>
+      <p id="event-2023-7" class="text-gray-700 hidden">
+        Vantaan Sanomat kirjoittavat: Asukkaat haluavat pelastaa Päiväkummun metsän, jonne Vantaa suunnittelee pientaloalueen laajennusta.
+        <br>
+        <a href="https://www.vantaansanomat.fi/paikalliset/5829736" target="_blank" class="text-blue-600 hover:underline">https://www.vantaansanomat.fi/paikalliset/5829736</a>
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-8')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        12.3.2023 Kuntalaisaloite julkaistaan
+      </button>
+      <p id="event-2023-8" class="text-gray-700 hidden">
+        Asukasaktiivit julkaisevat kuntalaisaloitteen: Säilytetään Keravanjokeen rajautuva yhtenäinen luonnonmetsä Päiväkummussa ja Matarissa.
+        <br>
+        <a href="https://www.kuntalaisaloite.fi/fi/aloite/30879" target="_blank" class="text-blue-600 hover:underline">https://www.kuntalaisaloite.fi/fi/aloite/30879</a>
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2023-9')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        8.3.2023 Asemakaavamuutos vireille
+      </button>
+      <p id="event-2023-9" class="text-gray-700 hidden">
+        Kaupunki laittaa vireille asemakaavamuutoksen ’002558 Päiväkummun pientalotontit ja virkistysalue’. Mielipiteet osallistumis- ja arviointisuunnitelman pyydettiin 18.4.2023 mennessä. Alueella on vanha asemakaava vuodelta 1958, joka ei sellaisenaan ole toteuttamiskelpoinen, koska ei ole ollut yleiskaavan mukainen. Ainakin 1983 yleiskaavassa alue on ollut viheraluetta ja on ollut niin aina 2020 yleiskaavauudistukseen saakka.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2022-1')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        30.11.2022 Kaupungin teettämä luontoselvitys valmistuu
+      </button>
+      <p id="event-2022-1" class="text-gray-700 hidden">
+        Faunatican raportteja 101/2022 julkaistaan. Faunatican tekemää selvitystä voidaan tulkita niin että se puoltaa alueen rakentamatta jättämisen:
+        <br><br>
+        Luontoselvitys Faunatican raportteja 101/2022 dokumentti kuvaa rakennusalueeksi ehdotettua luontotyyppiä seuraavasti:
+        <br>
+        Varttuneet havupuuvaltaiset lehtomaiset ja tuoreet kankaat: Valtakunnallisesti silmälläpidettävä (NT) luontotyyppi (alue 49), arvoluokka IV.
+        <br><br>
+        Arvoluokan IV kohteet ovat luontotyypiltään vähemmän arvokkaita tai luonnontilaltaan heikentyneitä, mutta ne voivat silti olla tärkeitä ekologisten yhteyksien säilymisen kannalta. Esimerkiksi dokumentissa todetaan, että "Luokan IV kohteetkin voivat olla ekologisten yhteyksien säilymisen kannalta tärkeitä." ja “Luokan IV kohteet voivat toimia reuna-alueina, jotka yhdistävät arvokkaampia luontotyyppejä toisiinsa ja lisäävät niiden lajistollista rikkautta.
+        <br><br>
+        Dokumentti suosittelee, että luokan IV kohteiden luontoarvoja tulisi huomioida maankäytössä mahdollisuuksien mukaan.
+      </p>
+    </div> 
+    
+        <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2022-2')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        28.6.2022 Yleiskaavaa koskevat valitukset hylätään
+      </button>
+      <p id="event-2022-2" class="text-gray-700 hidden">
+        Hallinto-oikeus hylkää päätöksellään suurimman osan valituksista ja niissä esitetyistä vaatimuksista. Yleiskaavaa koskevat valitukset, HELSINGIN HALLINTO-OIKEUS, 28.6.2022 – dokumentissa Suomen luonnonsuojeluliiton Uudenmaan piiri ry ja Suomen luonnonsuojeluliiton Vantaan yhdistys ry jätti seuraavan kannanoton:
+        <br><br>
+        ”Virkistysaluevarausten muuttaminen rakentamisvarauksiksi on monella tapaa yleiskaavan sisältövaatimusten vastaista. Metsäisten ekologisten yhteyksien vaurioittaminen sekä luontoarvoltaan osin melko monipuolisten metsien ohjaaminen rakennuskäyttöön ei täytä sisältövaatimusten edellyttämää luontoarvojen vaalimisvelvoitetta.”
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2021-1')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        25.1.2021 Uusi yleiskaava hyväksytään
+      </button>
+      <p id="event-2021-1" class="text-gray-700 hidden">
+        Kaupunginvaltuusto hyväksyi yleiskaavan 25.1.2021. Päätöksestä valitettiin Helsingin hallinto-oikeuteen.
+      </p>
+    </div>
+    
+    <div class="mb-10 ml-6">
+      <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+      <button onclick="toggleDetails('event-2020-1')" class="block mb-2 text-lg font-semibold text-gray-800 hover:underline text-left">
+        2020 Yleiskaavauudistus
+      </button>
+      <p id="event-2020-1" class="text-gray-700 hidden">
+        Alue on ollut Vantaan vaalittavaa viheraluetta kokonaisuudessaan aina 2020 vuoteen asti, jolloin yleiskaavauudistuksen yhteydessä lohkaistiin 5 hehtaaria alueen reuna-aluetta AP-alueeksi, eli pientaloalueeksi. Yleiskaavan uudistus tehtiin pahimman koronapandemian aikaan, jolloin asukkaiden osallistaminen on ollut vaikeaa. Asukkaille yleiskaavamuutos ja sen mukainen asemakaavan muutos on tullut yllätyksenä. Vantaan vaalittavan viheralueen kaavoittaminen rakennustarkoitukseen on käsittämätön päätös.
+      </p>
+    </div>
+
+
+    <!-- Add further events here if needed -->
 
     </div>
   </main>
