@@ -11,6 +11,25 @@
       element.classList.toggle('hidden');
     }
   </script>
+
+<style>
+    .flashing {
+      animation: flash 3s infinite; /* Slower animation (2 seconds) */
+      border-radius: 0.5rem; /* Rounded corners */
+    }
+  
+    @keyframes flash {
+      0%, 100% {
+        background-color: #84f8a9; /* Very light green, closer to white */
+        color: #ffffff; /* White text */
+      }
+      50% {
+        background-color: #34d399; /* Original green */
+        color: #ffffff; /* White text */
+      }
+    }
+  </style>
+
 </head>
 <body class="bg-gray-50">
 
@@ -29,71 +48,89 @@
 
   <main class="max-w-4xl mx-auto p-6">
     <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">
-      Kaavoitusprosessin eteneminen ja vaikuttamisen mahdollisuudet
+      Pysy ajan tasalla ja vaikuta päätöksiin
     </h1>
     <p class="mb-6 text-gray-700">
-      Näin pysyt ajantasalla ja pääset vaikuttamaan. Tilaa sähköpostiisi asukasaktiivien tiedotteet asian etenemisestä ja tietoa miten itse voit vaikuttaa. Laita viesti otsikolla: <strong>”Jokimetsän tiedotteet”</strong> osoitteeseen 
-      <a href="mailto:hpertta@gmail.com" class="text-blue-600 hover:underline text-left">hpertta@gmail.com</a> 
+      Tilaa sähköpostiisi asukasaktiivien tiedotteet asian etenemisestä ja tietoa miten itse voit vaikuttaa. Laita viesti otsikolla: <strong>”Jokimetsän tiedotteet”</strong> osoitteeseen 
+      <a href="mailto:hpertta@gmail.com" class="text-blue-600 hover:underline">hpertta@gmail.com</a> 
       liittyäksesi sposti-listalle. Emme spämmää.
     </p>
     <p class="mb-8 text-gray-700">
       Ota 
-      <a href="https://www.facebook.com/groups/2086345038416080/" 
-         target="_blank" 
-         class="text-blue-600 hover:underline">
-         ’Vantaan lähimetsien puolesta’ Facebook-ryhmä
+      <a href="https://www.facebook.com/groups/2086345038416080/" target="_blank" class="text-blue-600 hover:underline">
+        ’Vantaan lähimetsien puolesta’ Facebook-ryhmä
       </a> 
       seurantaan.
     </p>
 
-    <!-- Timeline container -->
-    <div class="relative border-l-4 border-green-600">
+    <!-- Timeline sections -->
 
-      <!-- 2025 items -->
-      <div class="mb-10 ml-6">
-        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <button onclick="toggleDetails('event-2025-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
-          13.5.2025 Kaava mahdollisesti esillä kaupunkiympäristölautakunnan kokouksessa
-        </button>
-        <p id="event-2025-1" class="text-gray-700 hidden">
-          Kaavan esittelyn jälkeen on asukkailla mahdollisuus jättää kaavasta muistutuksia. Tämä ajankohta voi sattua kesälle.
-        </p>
+    <!-- Upcoming events -->
+    <section id="upcoming">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Tulossa</h2>
+      <!-- Wrap timeline items in a container with left padding -->
+      <div class="relative border-l-4 border-green-600 pl-8">
+        <div class="mb-10">
+          <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+          <button onclick="toggleDetails('event-2025-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
+            13.5.2025 Kaava mahdollisesti esillä kaupunkiympäristölautakunnan kokouksessa
+          </button>
+          <p id="event-2025-1" class="text-gray-700 hidden">
+            Kaavan esittelyn jälkeen on asukkailla mahdollisuus jättää kaavasta muistutuksia.
+          </p>
+        </div>
+      
       </div>
+    </section>
 
-      <div class="mb-10 ml-6">
+    <!-- Current events -->
+    <section id="current" class="mt-12">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Ajankohtaista</h2>
+      <div class="relative border-l-4 border-green-600 pl-8">
+
+        <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <button onclick="toggleDetails('event-2025-2')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
-          13.4.2025 Kuntavaalit (ennakkoäänestys 2.–8.4.2025)
+        <button onclick="toggleDetails('event-2025-2')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left flashing">
+            13.4.2025 Kuntavaalit (ennakkoäänestys 2.–8.4.2025)
         </button>
         <p id="event-2025-2" class="text-gray-700 hidden">
-          Vaalivinkkejä Jokimetsä-sivustolla ja Suomen luonnonsuojeluliiton kuntavaalit – sivulla 
-          <a href="https://www.sll.fi/kuntavaalit" target="_blank" class="text-blue-600 hover:underline text-left">
-            https://www.sll.fi/kuntavaalit
-          </a>.
+            Vaalivinkkejä <a href="vaalit.html" class="text-blue-600 hover:underline">Jokimetsä-sivustolla</a> ja Suomen luonnonsuojeluliiton kuntavaalit – sivulla 
+            <a href="https://www.sll.fi/kuntavaalit" target="_blank" class="text-blue-600 hover:underline">
+                https://www.sll.fi/kuntavaalit
+            </a>.
         </p>
-      </div>
+        </div>
 
-      <div class="mb-10 ml-6">
-        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <button onclick="toggleDetails('event-2025-3')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
-          2.4.2025 Jokimetsa.com sivusto avataan
-        </button>
-        <p id="event-2025-3" class="text-gray-700 hidden">
-          Asukasaktiivit avaavat sivuston netissä, jossa on osiot päättäjille, äänestäjille sekä paikka missä seurata päätösprosessin etenemistä.
-        </p>
+      
+        <div class="mb-10">
+          <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+          <button onclick="toggleDetails('event-2025-3')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
+            2.4.2025 Jokimetsa.com sivusto avataan
+          </button>
+          <p id="event-2025-3" class="text-gray-700 hidden">
+            Asukasaktiivit avaavat sivuston netissä, jossa on osiot päättäjille, äänestäjille sekä paikka missä seurata päätösprosessin etenemistä.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="mb-10 ml-6">
-        <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
-        <button onclick="toggleDetails('event-2025-4')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
-          9.3.2025 Luontopäivä
-        </button>
-        <p id="event-2025-4" class="text-gray-700 hidden">
-          Asukasaktiivit järjestävät yhdessä Korso-Koivukylä Vihreiden ja Rekolan Marttojen tuella Luontopäivän alueella tietoisuuden lisäämiseksi. Kuntalaisaloitteen kannatusmäärä 2551.
-        </p>
-      </div>
+    <!-- Past events -->
+    <section id="past" class="mt-12">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Tapahtunut tähän mennessä</h2>
 
-      <div class="mb-10 ml-6">
+      <div class="relative border-l-4 border-green-600 pl-8">
+        <div class="mb-10">
+          <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
+          <button onclick="toggleDetails('event-2025-4')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
+            9.3.2025 Luontopäivä
+          </button>
+          <p id="event-2025-4" class="text-gray-700 hidden">
+            Asukasaktiivit järjestävät yhdessä Korso-Koivukylä Vihreiden ja Rekolan Marttojen tuella Luontopäivän alueella tietoisuuden lisäämiseksi.
+          </p>
+        </div>
+
+
+	    <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2025-5')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           6.3.2025 Mielipidekirjoitus: Kuunnellaanko Vantaalla aidosti asukkaita?
@@ -103,7 +140,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2025-6')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           4.3.2025 Asukasaktiivien kirje kaupunkiympäristölautakunnan jäsenille
@@ -113,7 +150,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2025-7')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           27.1.2025 Jari Jääskeläinen jätti valtuustoaloitteen ”Päiväkummun Keravanjoen lähimetsä suojeltava”
@@ -123,7 +160,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2025-8')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           14.1.2025 Pöytäkirjalausuma koskien 'Kaavoitusohjelma 2025-2027' dokumenttia ja kokonaisheikentämättömyyden mallia
@@ -136,7 +173,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2025-9')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           13.1.2025 Mielipidekirjoitus: Rakennetaan pelloille, jotta lähimetsät säästyvät Vantaalla
@@ -147,7 +184,7 @@
       </div>
 
       <!-- 2024 items -->
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           10.12.2024 Kaavaluonnosta esiteltiin kaupunkiympäristölautakunnan kokouksessa
@@ -160,7 +197,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-2')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           12.11.2024 Yleiskaava 2020:n mahdollistamat pientaloalueet -kartoitus julkaistaan
@@ -171,7 +208,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-3')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           8.10.2024 Suomen luonnonsuojeluliiton järjestämä maastokäynti kaupungille
@@ -185,7 +222,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-4')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           19.9.2024 Vastaus asukasaktiivien kirjeeseen
@@ -196,7 +233,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-5')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           16.9.2024 Päiväkummun asemakaavamuutoksen huolenaiheet ja kysymykset – asukasaktiivien kirje
@@ -217,7 +254,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-6')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           07/2024 Äänimaisemaltaan hiljaiset ja miellyttävät alueet Vantaalla selvitys
@@ -231,7 +268,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-7')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           24.5.2024 Asukasaktiivien järjestäytyminen
@@ -241,7 +278,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-8')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           10.4.2024 Suomen luonnonsuojeluliiton Uudenmaanpiirin lausunto kaavaluonnoksesta
@@ -257,7 +294,7 @@
         </p>
       </div>
       
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-9')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           10.4.2024 Paikallisten yhdistysten ja asukasaktiivien kannanotto
@@ -269,7 +306,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-10')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           27.3.2024 Kaavan valmisteluaineisto julkaistaan
@@ -280,7 +317,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2024-11')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           6.2.2024 Asukkaiden ja paikallisten yhdistysten kirje päättäjille
@@ -295,7 +332,7 @@
       </div>
     
       <!-- 2023 items -->
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           9.5.2023 Kuntalaisaloitteen kannatustilanteen henk. koht. luovutus kaupunkiympäristölautakunnalle
@@ -307,7 +344,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-2')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           28.4.2023 Asukasaktiivit kutsuvat päättäjiä maastoon tutustumaan alueeseen
@@ -317,7 +354,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-3')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           17.4.2023 Kuntalaisaloitetta kannattaneiden kannanotto
@@ -329,7 +366,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-4')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           12.4.2023 Juttu Hesarissa
@@ -345,7 +382,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-5')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           11.4.2023 Asukasaktiivit kutsuvat päättäjiä tutustumaan alueeseen
@@ -356,7 +393,7 @@
         </p>
       </div>
 
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-6')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           4.4.2023 Kaupungin asukastilaisuus
@@ -367,7 +404,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-7')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           1.4.2023 Juttu Vantaan Sanomissa
@@ -384,7 +421,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-8')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           12.3.2023 Kuntalaisaloite julkaistaan
@@ -401,7 +438,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2023-9')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           8.3.2023 Asemakaavamuutos vireille
@@ -414,7 +451,7 @@
         </p>
       </div>
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2022-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           30.11.2022 Kaupungin teettämä luontoselvitys valmistuu
@@ -438,7 +475,7 @@
         </p>
       </div> 
     
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2022-2')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           28.6.2022 Yleiskaavaa koskevat valitukset hylätään
@@ -455,7 +492,7 @@
       </div>
     
       <!-- 2021 items -->
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2021-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           25.1.2021 Uusi yleiskaava hyväksytään
@@ -466,7 +503,7 @@
       </div>
     
       <!-- 2020 items -->
-      <div class="mb-10 ml-6">
+      <div class="mb-10">
         <div class="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white"></div>
         <button onclick="toggleDetails('event-2020-1')" class="block mb-2 text-lg font-semibold text-blue-800 hover:underline text-left">
           2020 Yleiskaavauudistus
@@ -479,9 +516,11 @@
           rakennustarkoitukseen on käsittämätön päätös.
         </p>
       </div>
+	
 
-    </div><!-- End of timeline container -->
-    
-  </main><!-- end main -->
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>
